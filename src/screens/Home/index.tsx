@@ -48,7 +48,7 @@ export default function Home() {
           <Participant 
             key={item} 
             name={item} 
-            onRemove={() => handleParticipantRemove}
+            onRemove={() => handleParticipantRemove()}
           />
         )}
       />
