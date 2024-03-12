@@ -45,5 +45,10 @@ export const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     marginVertical: 36
+  },
+  emptyList: {
+    color: '#fff',
+    fontSize: 16,
+    textAlign: 'center'
   }
 });
