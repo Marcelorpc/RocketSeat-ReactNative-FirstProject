@@ -4,8 +4,13 @@ import { Participant } from "../../components/participant"
 
 export default function Home() {
   function handleParticipantAdd() {
-    console.log("funcionou")
+    console.log("adicionei")
   }
+
+  function handleParticipantRemove() {
+    console.log("removi")
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.eventName}>
@@ -31,10 +36,10 @@ export default function Home() {
         </TouchableOpacity>
       </View>
 
-      <Participant name="Marcelo Paiva Chaves"/>
-      <Participant name="Claudinho Silva"/>
-      <Participant name="Juninho Goncalves" />
-      <Participant name="Ana Maria das Gracas" />
+      <Participant name="Marcelo Paiva Chaves" onRemove={handleParticipantRemove} />
+      <Participant name="Claudinho Silva" onRemove={handleParticipantRemove} />
+      <Participant name="Juninho Goncalves" onRemove={handleParticipantRemove} />
+      <Participant name="Ana Maria das Gracas" onRemove={handleParticipantRemove} />
     </View>
   )
 }
