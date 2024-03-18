@@ -11,9 +11,11 @@ export default function Home() {
   function handleParticipantAdd() {
     if(participants.includes(participantNameInput)) {
       return Alert.alert("Participante ja existe", "Ja existe um participante na lista com esse nome!")
-    } else {
+    } else if(participantNameInput !== '') {
       setParticipants(prevState => [...prevState, participantNameInput])
       setParticipantNameInput('')
+    } else {
+      return Alert.alert("Atencao!", "Voce precisa adicionar o nome do participante!")
     }
   }
 
