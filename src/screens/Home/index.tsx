@@ -1,4 +1,4 @@
-import { Text, View, TextInput, TouchableOpacity, FlatList, Alert } from "react-native"
+import { Text, View, TextInput, TouchableOpacity, FlatList, Alert, Keyboard } from "react-native"
 import { styles } from "./styles"
 import { Participant } from "../../components/participant"
 import { ChangeEvent, useState } from "react"
@@ -12,6 +12,7 @@ export default function Home() {
     if(participants.includes(participantNameInput)) {
       return Alert.alert("Participante ja existe", "Ja existe um participante na lista com esse nome!")
     } else if(participantNameInput !== '') {
+      Keyboard.dismiss()
       setParticipants(prevState => [...prevState, participantNameInput])
       setParticipantNameInput('')
     } else {
