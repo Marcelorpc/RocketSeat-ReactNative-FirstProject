@@ -45,7 +45,7 @@ export default function Home() {
           placeholder="Nome do Participante"
           placeholderTextColor='#ffffff'
           keyboardType="default"
-          onChangeText={text => setParticipantNameInput(text)}
+          onChangeText={setParticipantNameInput}
           value={participantNameInput}
         />
         
