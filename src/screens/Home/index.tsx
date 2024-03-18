@@ -17,11 +17,11 @@ export default function Home() {
     }
   }
 
-  function handleParticipantRemove(participant: string) {
-    Alert.alert("Remover", `Remover participante ${participant}?`, [
+  function handleParticipantRemove(participantName: string) {
+    Alert.alert("Remover", `Remover participante ${participantName}?`, [
       {
         text: 'Sim',
-        onPress: () => Alert.alert("Deletado!")
+        onPress: () => setParticipants(prevState => prevState.filter(participant => participant !== participantName))
       },
       {
         text: 'Nao',
