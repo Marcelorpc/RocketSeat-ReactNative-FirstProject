@@ -10,7 +10,7 @@ export default function Home() {
     if(participants.includes("Marcelo")) {
       return Alert.alert("Participante ja existe", "Ja existe um participante na lista com esse nome!")
     } else {
-      setParticipants([...participants, "jose"])
+      setParticipants(prevState => [...prevState, "participante 2"])
     }
   }
 
