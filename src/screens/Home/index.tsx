@@ -1,7 +1,7 @@
 import { Text, View, TextInput, TouchableOpacity, FlatList, Alert, Keyboard } from "react-native"
 import { styles } from "./styles"
 import { Participant } from "../../components/participant"
-import { ChangeEvent, useState } from "react"
+import { useState } from "react"
 
 export default function Home() {
   const [participantNameInput, setParticipantNameInput] = useState("")
